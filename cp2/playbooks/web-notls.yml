@@ -2,6 +2,12 @@
   hosts: webservers
   sudo: True
   tasks:
+    - name: backup old source.list
+      command: creates="/etc/apt/source.list.bak" mv /etc/apt/sources.list /etc/apt/sources.list.bak
+
+    - name: use 163 apt mirrors
+      copy: src=files/ubuntu14.04.source.list dest=/etc/apt/sources.list
+
     - name: install nginx
       apt: name=nginx update_cache=yes
 
