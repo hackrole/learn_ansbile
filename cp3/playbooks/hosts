@@ -1,0 +1,9 @@
+tmpverycd ansible_host=198.21.11.1 ansible_port=20
+vagrant1 ansible_host=127.0.0.1 ansible_port=2222
+vagrant2 ansible_host=127.0.0.1 ansible_port=2200
+vagrant3 ansible_host=127.0.0.1 ansible_port=2201
+
+[vagrant]
+vagrant1
+vagrant2
+vagrant3
